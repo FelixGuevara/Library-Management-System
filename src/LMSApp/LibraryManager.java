@@ -118,4 +118,30 @@ public class LibraryManager {
     public boolean isValidFine(double fine) {
         return fine >= 0 && fine <= 250;
     }
+
+    /**
+     * Method: searchById
+     * Purpose: Finds a patron by their exact ID.
+     * Arguments: String id - the ID to search for
+     * Return: Patron - the matching patron or null if not found
+     */
+    public Patron searchById(String id) {
+        return patronList.get(id);
+    }
+
+    /**
+     * Method: searchByName
+     * Purpose: Finds patrons whose names contain the given keyword (case-insensitive).
+     * Arguments: String name - the name keyword to search for
+     * Return: List<Patron> - list of matching patrons
+     */
+    public List<Patron> searchByName(String name) {
+        List<Patron> results = new ArrayList<>();
+        for (Patron patron : patronList.values()) {
+            if (patron.getName().toLowerCase().contains(name.toLowerCase())) {
+                results.add(patron);
+            }
+        }
+        return results;
+    }
 }
