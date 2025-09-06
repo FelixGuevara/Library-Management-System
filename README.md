@@ -43,7 +43,7 @@ The Library Management System (LMS) is a console-based Java application develope
 
 **Felix Guevara**  
 Date: September 4, 2025  
-Course: [Your Course Name]
+Course: [CEN-3024C-13950]
 
 ---
 
